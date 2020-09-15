@@ -1,0 +1,49 @@
+body {
+  /* background-color: blueviolet; */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-width {
+  /* width: 15rem; */
+  background-color: black;
+}
+
+#projectsJumbotron {
+  background-image: url('/images/clouds.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.projectsRunner {
+  background: rgba(128, 128, 128, 0.6);
+  /* opacity: 1; */
+}
+
+.projectsRunnerText {
+  color: rgba(50, 205, 50, 1);
+}
+
+#contactJumbotron {
+  background-image: url('/images/contactJumbo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contactRunner {
+  background-color: rgba(196, 48, 48, 0.2);
+}
+
+.contactRunnerText {
+  color: rgba(50, 205, 50, 1);
+}
+
+/* .form {
+  width: 100%;
+} */

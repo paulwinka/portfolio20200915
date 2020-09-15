@@ -1,0 +1,34 @@
+<body>
+  <div class="container">
+    <main class="">
+      <div class="jumbotron" id="contactJumbotron">
+      </div>
+      <div class="contactRunner">
+        <h2 class="contactRunnerText">Please get in touch with me here!!!</h2>
+      </div>
+      <form action="/contact" class="form mt-4" method="POST" id="contact-form">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" value="{{email}}">
+          <div class="text-danger">{{emailError}}</div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-control" value="{{subject}}">
+          <div class="text-danger">{{subjectError}}</div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="4" class="form-control" value="{{messagej}}"></textarea>
+          <div class="text-danger">{{messageError}}</div>
+        </div>
+        <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+        {{#if isValid}}
+        <output class="text-success">{{result}}</output>
+        {{else}}
+        <div class="text-danger">{{result}}</output>
+          {{/if}}
+      </form>
+    </main>
+  </div>
+</body>
