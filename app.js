@@ -14,19 +14,6 @@ app.engine(
 app.set('view engine', 'handlebars');
 app.use(express.urlencoded({ extended: false }));
 
-// app.get('/', (req, res) => {
-//   debug('home page');
-//   res.sendFile(path.join(__dirname, 'public/index.html'));
-// });
-// app.get('/projects', (req, res) => {
-//   debug('projects page');
-//   res.sendFile(path.join(__dirname, 'public/projects.html'));
-// });
-// app.get('/contact', (req, res) => {
-//   debug('contact page');
-//   res.sendFile(path.join(__dirname, 'public/contact_me.html'));
-// });
-
 app.get('/', (req, res) => {
   res.render('home', { title: 'ABOUT ME: Paul Winka', active: 'home' });
 });
@@ -60,11 +47,6 @@ app.post('/contact', (req, res) => {
   data.result = data.isValid ? 'Message Sent!' : 'Please fix the errors above!';
   res.render('contact', data);
 });
-
-// app.post('/', (req, res) => {
-//   const data = { title: 'Some of my projects' };
-//   res.render('home', data);
-// });
 
 app.use('/jquery', express.static('node_modules/jquery/dist'));
 app.use('/bootstrap', express.static('node_modules/bootstrap/dist/js'));
